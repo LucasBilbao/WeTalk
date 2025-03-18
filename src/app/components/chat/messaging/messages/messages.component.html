@@ -1,0 +1,7 @@
+<ol>
+  @for (message of messages().reverse(); track $index) {
+  <li>
+    <wetalk-message-item [message]="message" />
+  </li>
+  }
+</ol>
