@@ -1,4 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./globals.scss" as globals;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  font-size: #{globals.$PX_SIZE}px;
+}
+
+body {
+  height: 100dvh;
+  overflow-x: hidden;
+  background: #ceefed;
+  padding: globals.pxToRem(20) globals.pxToRem(30) globals.pxToRem(20)
+    globals.pxToRem(45);
+}
+
+::-webkit-scrollbar {
+  width: globals.pxToRem(7);
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f17a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.635);
+
+  &:hover {
+    background: gray;
+  }
+}
+
+input {
+  all: unset;
+}
+
+li {
+  list-style: none;
+}
