@@ -1,0 +1,22 @@
+@use "../../../../../globals.scss" as globals;
+
+form {
+  display: flex;
+  column-gap: globals.pxToRem(25);
+  width: 100%;
+  background: white;
+  padding: globals.pxToRem(40) globals.pxToRem(35);
+  border-radius: globals.pxToRem(20);
+
+  input {
+    display: inline-block;
+    width: 100%;
+    @include globals.font(30, 34, lighter);
+  }
+
+  button {
+    transform: scale(2);
+    color: white;
+    background: globals.$MAIN_COLOR;
+  }
+}

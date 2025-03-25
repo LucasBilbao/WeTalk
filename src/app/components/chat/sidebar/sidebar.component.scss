@@ -1,0 +1,89 @@
+@use "../../../../globals.scss" as globals;
+
+:host {
+  height: fit-content;
+  aside {
+    max-width: globals.pxToRem(450);
+    background: white;
+    height: 97dvh;
+    border-radius: globals.pxToRem(10);
+    border: globals.pxToRem(1) solid rgb(182, 182, 182);
+    box-shadow: globals.pxToRem(0) globals.pxToRem(0) globals.pxToRem(10)
+      globals.pxToRem(2) rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    section {
+      height: 100%;
+      &.profile {
+        display: flex;
+        align-items: center;
+        margin-top: globals.pxToRem(9);
+        column-gap: globals.pxToRem(12);
+        padding-left: globals.pxToRem(26);
+        padding-left: globals.pxToRem(26);
+        padding-right: globals.pxToRem(34);
+
+        img {
+          width: globals.pxToRem(60);
+          aspect-ratio: 1;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        div {
+          h2 {
+            @include globals.font(22, 26, bold);
+
+            & + p {
+              margin-top: globals.pxToRem(3);
+            }
+          }
+
+          p {
+            @include globals.font(16, 19, lighter);
+          }
+        }
+
+        mat-icon {
+          margin-left: auto;
+          cursor: pointer;
+        }
+      }
+
+      &.messages_search {
+        margin-top: globals.pxToRem(50);
+
+        h3 {
+          @include globals.font(25, 29, bold);
+          margin-left: globals.pxToRem(35);
+        }
+
+        & > div {
+          padding: globals.pxToRem(0) globals.pxToRem(33) globals.pxToRem(0)
+            globals.pxToRem(19);
+          form {
+            display: flex;
+            align-items: center;
+            column-gap: globals.pxToRem(10);
+            padding: globals.pxToRem(24) globals.pxToRem(5) globals.pxToRem(24)
+              globals.pxToRem(16);
+            width: 100%;
+            margin-top: globals.pxToRem(25);
+            background: #ededed;
+            border-radius: globals.pxToRem(20);
+            box-shadow: globals.pxToRem(8) globals.pxToRem(8)
+              globals.pxToRem(10) globals.pxToRem(1) rgba(0, 0, 0, 0.202);
+
+            input {
+              width: 100%;
+              @include globals.font(24, 28, lighter);
+            }
+          }
+
+          margin-bottom: globals.pxToRem(10);
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <aside>
-  <section>
+  <section class="profile">
     <img
       src="https://newprofilepic.photo-cdn.net//assets/images/article/profile.jpg?90af0c8"
       alt=""
@@ -14,16 +14,18 @@
       fontIcon="notifications"
     />
   </section>
-  <section>
+  <section class="messages_search">
     <h3>Messages</h3>
-    <form>
-      <mat-icon
-        aria-hidden="false"
-        aria-label="Notification icon"
-        fontIcon="search"
-      />
-      <input type="text" placeholder="Search" />
-    </form>
+    <div>
+      <form>
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Notification icon"
+          fontIcon="search"
+        />
+        <input type="text" placeholder="Search" />
+      </form>
+    </div>
     <wetalk-chats />
   </section>
 </aside>

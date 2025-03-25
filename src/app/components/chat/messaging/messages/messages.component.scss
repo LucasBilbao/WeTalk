@@ -1,0 +1,17 @@
+@use "../../../../../globals.scss" as globals;
+
+:host {
+  div {
+    overflow-y: scroll;
+    height: globals.pxToRem(803.594);
+    max-height: globals.pxToRem(804);
+    padding-right: globals.pxToRem(5);
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      row-gap: globals.pxToRem(5);
+      justify-content: flex-end;
+    }
+  }
+}

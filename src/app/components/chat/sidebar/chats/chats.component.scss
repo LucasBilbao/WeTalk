@@ -1,0 +1,25 @@
+@use "../../../../../globals.scss" as globals;
+
+:host {
+  ul {
+    overflow-y: scroll;
+    max-height: 75%;
+    li {
+      cursor: pointer;
+      padding: globals.pxToRem(20) globals.pxToRem(54) globals.pxToRem(20)
+        globals.pxToRem(42);
+      & + li {
+        border-top: globals.pxToRem(1) solid rgba(0, 0, 0, 0.17);
+      }
+
+      &:hover {
+        background: #a3e1dd2f;
+      }
+
+      &.active {
+        background: #a3e1dd2f;
+        border-left: globals.pxToRem(6) solid globals.$MAIN_COLOR;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@use "../../../../../../globals.scss" as globals;
+
+:host {
+  & > div {
+    display: flex;
+    align-items: flex-end;
+    column-gap: globals.pxToRem(20);
+    $size: 10;
+
+    img {
+      width: globals.pxToRem(70);
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+
+    & > div {
+      p {
+        position: relative;
+        padding: globals.pxToRem(18) globals.pxToRem(15);
+        max-width: globals.pxToRem(390);
+        border-radius: globals.pxToRem(10);
+        border-bottom-left-radius: globals.pxToRem(0);
+        @include globals.font(20, 24);
+
+        &.message {
+          background: white;
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -15px;
+            border-top: globals.pxToRem($size * 3 / 2) solid white;
+            border-left: globals.pxToRem($size * 3 / 2) solid transparent;
+            border-bottom: globals.pxToRem($size) solid transparent;
+            transform: rotate(45deg);
+          }
+        }
+
+        &:not(.message) {
+          @include globals.font(15, 16, lighter);
+        }
+      }
+    }
+
+    &.outgoing {
+      flex-direction: row-reverse;
+      & > div {
+        p {
+          &.message {
+            color: white;
+            background: globals.$MAIN_COLOR;
+            border-bottom-left-radius: globals.pxToRem(10);
+            border-bottom-right-radius: globals.pxToRem(0);
+
+            &:before {
+              bottom: -9px;
+              right: -11px;
+              border-top-color: globals.$MAIN_COLOR;
+              transform: rotate(-135deg);
+            }
+          }
+        }
+      }
+    }
+    &:not(.outgoing) {
+      & > div {
+        p {
+          &.message {
+            &:before {
+              left: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
