@@ -13,8 +13,8 @@
 }
 
 body {
-  height: 100dvh;
-  overflow-x: hidden;
+  max-height: 100dvh;
+  overflow: hidden;
   background: #ceefed;
   padding: globals.pxToRem(20) globals.pxToRem(30) globals.pxToRem(20)
     globals.pxToRem(45);

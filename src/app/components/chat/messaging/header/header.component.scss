@@ -1,0 +1,44 @@
+@use "../../../../../globals.scss" as globals;
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+  * {
+    color: white;
+  }
+
+  background: globals.$MAIN_COLOR;
+  padding: globals.pxToRem(12) globals.pxToRem(32);
+  border-radius: globals.pxToRem(10);
+
+  div {
+    &.info {
+      display: flex;
+      align-items: center;
+      column-gap: globals.pxToRem(32);
+
+      img {
+        width: globals.pxToRem(80);
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+
+      h2 {
+        @include globals.fontSizing(34, 38);
+        color: white;
+      }
+    }
+
+    &.actions {
+      display: flex;
+      align-items: center;
+      column-gap: globals.pxToRem(40);
+
+      button {
+        transform: scale(2);
+      }
+    }
+  }
+}

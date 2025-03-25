@@ -33,8 +33,7 @@
 
         div {
           h2 {
-            @include globals.fontSizing(22, 26);
-            font-weight: bold;
+            @include globals.font(22, 26, bold);
 
             & + p {
               margin-top: globals.pxToRem(3);
@@ -42,8 +41,7 @@
           }
 
           p {
-            @include globals.fontSizing(16, 19);
-            font-weight: lighter;
+            @include globals.font(16, 19, lighter);
           }
         }
 
@@ -57,8 +55,7 @@
         margin-top: globals.pxToRem(50);
 
         h3 {
-          @include globals.fontSizing(25, 29);
-          font-weight: bold;
+          @include globals.font(25, 29, bold);
           margin-left: globals.pxToRem(35);
         }
 
@@ -80,8 +77,7 @@
 
             input {
               width: 100%;
-              @include globals.fontSizing(24, 28);
-              font-weight: lighter;
+              @include globals.font(24, 28, lighter);
             }
           }
 
